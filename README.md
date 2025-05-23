@@ -42,3 +42,6 @@ cargo run --bin client
    - The server will print the message along with the client's address
    - The server will broadcast the message to all connected clients
    - All clients will receive and display the message.
+
+# 2.2 Modifying the websocket port
+The broadcast chat system uses WebSocket protocol for real-time communication between the server and clients. The connection details are defined in both the server and client code. The WebSocket protocol is defined in both files using the `tokio_websockets` crate, which provides the WebSocket implementation. The protocol is specified as ws:// in the client's URI, and the server uses the same protocol through the ServerBuilder and ClientBuilder from the same crate.
